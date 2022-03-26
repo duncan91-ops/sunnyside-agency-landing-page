@@ -44,6 +44,17 @@ body {
   font-weight: 700;
 }
 
+.heading-tertiary {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: #a7abae;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.6rem;
+  margin: 5rem 0;
+}
+
 .btn {
   border: none;
   display: inline-block;
@@ -138,6 +149,39 @@ body {
 }
 .illustration--blended:last-child {
   margin-top: -4px;
+}
+
+.testimonial {
+  width: 88%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 7rem;
+}
+.testimonial__img-box {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.testimonial__img {
+  width: 100%;
+}
+.testimonial__text {
+  color: #818498;
+  line-height: 1.5;
+}
+.testimonial__owner--name {
+  font-family: "Fraunces", serif;
+  margin-bottom: 1rem;
+}
+.testimonial__owner--title {
+  color: #a7abae;
+  font-size: 1.6rem;
 }
 
 .header {

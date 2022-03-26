@@ -18,3 +18,14 @@ body {
   font-family: $fontSecondary;
   font-weight: 700;
 }
+
+.heading-tertiary {
+  font-family: $fontSecondary;
+  font-weight: 700;
+  color: $tertiaryGrayishBlue;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.6rem;
+  margin: 5rem 0;
+}

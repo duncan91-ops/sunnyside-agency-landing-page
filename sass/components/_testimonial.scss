@@ -1,0 +1,39 @@
+.testimonial {
+  width: 88%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 7rem;
+
+  &__img-box {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    color: $secondaryGrayishBlue;
+    line-height: 1.5;
+  }
+
+  &__owner {
+    &--name {
+      font-family: $fontSecondary;
+      margin-bottom: 1rem;
+    }
+
+    &--title {
+      color: $tertiaryGrayishBlue;
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.header {
+  height: 54rem;
+  background: url("../images/mobile/image-header.jpg") center left / cover
+    no-repeat;
+  position: relative;
+
+  &__links {
+    display: none;
+    position: absolute;
+    background-color: $primaryWhite;
+    left: 5%;
+    width: 90%;
+    top: 20%;
+    text-align: center;
+    padding: 4rem;
+  }
+
+  &__links::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    border-top: 30px solid transparent;
+    border-right: 30px solid $primaryWhite;
+  }
+
+  &__link:not(:last-child) {
+    margin-bottom: 4rem;
+
+    a {
+      color: $secondaryGrayishBlue;
+
+      &:hover {
+        color: $primaryGrayishBlue;
+      }
+    }
+  }
+
+  .arrow {
+    text-align: center;
+  }
+}

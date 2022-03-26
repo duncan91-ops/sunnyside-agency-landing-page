@@ -1,0 +1,60 @@
+.illustration {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  &__hero {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: 75%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $secondaryBlue;
+  }
+
+  &__text {
+    text-align: center;
+    color: $secondaryGrayishBlue;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  &--blended {
+    position: relative;
+
+    .illustration {
+      &__content {
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        bottom: 10%;
+        text-align: center;
+        color: $primaryWhite;
+      }
+
+      &__title {
+        color: $primaryCyan;
+      }
+
+      &__text {
+        color: $primaryCyan;
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-top: -4px;
+    }
+  }
+}

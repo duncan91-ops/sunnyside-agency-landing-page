@@ -3,3 +3,18 @@ body {
   font-family: $fontPrimary;
   font-weight: 600;
 }
+
+.heading-primary {
+  text-transform: uppercase;
+  font-family: $fontSecondary;
+  font-weight: 700;
+  text-align: center;
+  color: $primaryWhite;
+  margin: 7rem 0;
+  letter-spacing: 10px;
+}
+
+.heading-secondary {
+  font-family: $fontSecondary;
+  font-weight: 700;
+}

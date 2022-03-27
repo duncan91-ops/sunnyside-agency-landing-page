@@ -11,6 +11,12 @@
     border-radius: 100px;
     padding: 1.5rem 2.5rem;
     background-color: $primaryYellow;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background-color: $tertiaryBlue;
+      color: $primaryWhite !important;
+    }
   }
 
   &__secondary {
@@ -19,6 +25,11 @@
 
   &--yellow {
     position: relative;
+
+    &:hover::after {
+      background-color: $primaryYellow;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -30,11 +41,17 @@
       left: -5%;
       top: 50%;
       z-index: -1;
+      transition: all 0.3s ease-in;
     }
   }
 
   &--red {
     position: relative;
+
+    &:hover::after {
+      background-color: $primaryRed;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -46,6 +63,20 @@
       left: -5%;
       top: 50%;
       z-index: -1;
+      transition: all 0.3s ease-in;
     }
+  }
+}
+
+.nav-toggle {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 750px) {
+    display: none;
   }
 }

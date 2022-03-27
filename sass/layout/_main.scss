@@ -1,0 +1,24 @@
+.main {
+  .illustrations {
+    @media screen and (min-width: 750px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  .testimonials {
+    @media screen and (min-width: 750px) {
+      display: flex;
+      gap: 2rem;
+      max-width: 110rem;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-testimonials {
+      padding: 7rem 0;
+    }
+  }
+}

@@ -8,11 +8,16 @@
     display: none;
     position: absolute;
     background-color: $primaryWhite;
-    left: 5%;
+    // left: 5%;
+    right: 5%;
     width: 90%;
     top: 20%;
     text-align: center;
     padding: 4rem;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__links::after {
@@ -29,6 +34,7 @@
 
     a {
       color: $secondaryGrayishBlue;
+      transition: all 0.3s ease-in;
 
       &:hover {
         color: $primaryGrayishBlue;
@@ -38,5 +44,41 @@
 
   .arrow {
     text-align: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    background: url("../images/desktop/image-header.jpg") center left / cover
+      no-repeat;
+
+    &__links,
+    &__links.active {
+      width: auto;
+      display: flex;
+      align-items: flex-start;
+      padding: 0;
+      top: 20px;
+      background-color: transparent;
+    }
+
+    &__links::after {
+      display: none;
+    }
+
+    &__link {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        padding-top: 10px;
+        margin-right: 2rem;
+
+        a {
+          color: $primaryWhite;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 80rem;
   }
 }

@@ -68,12 +68,20 @@ body {
   border-radius: 100px;
   padding: 1.5rem 2.5rem;
   background-color: #fad400;
+  transition: all 0.3s ease-in;
+}
+.btn__primary:hover {
+  background-color: #6ecffc;
+  color: white !important;
 }
 .btn__secondary {
   padding: 0 5px;
 }
 .btn--yellow {
   position: relative;
+}
+.btn--yellow:hover::after {
+  background-color: #fad400;
 }
 .btn--yellow::after {
   content: "";
@@ -86,9 +94,13 @@ body {
   left: -5%;
   top: 50%;
   z-index: -1;
+  transition: all 0.3s ease-in;
 }
 .btn--red {
   position: relative;
+}
+.btn--red:hover::after {
+  background-color: #fe7867;
 }
 .btn--red::after {
   content: "";
@@ -101,6 +113,20 @@ body {
   left: -5%;
   top: 50%;
   z-index: -1;
+  transition: all 0.3s ease-in;
+}
+
+.nav-toggle {
+  border: none;
+  background-color: transparent;
+}
+.nav-toggle:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 750px) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
 .illustration {
@@ -150,6 +176,33 @@ body {
 .illustration--blended:last-child {
   margin-top: -4px;
 }
+@media screen and (min-width: 750px) {
+  .illustration--blended {
+    margin-top: -4px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .illustration {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1/-1;
+    text-align: left;
+  }
+  .illustration__title, .illustration__text {
+    text-align: left;
+  }
+  .illustration--blended .illustration__title, .illustration--blended .illustration__text {
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+  }
+  .illustration--blended .illustration__title {
+    margin-bottom: 2rem;
+  }
+  .illustration--mid .illustration__content {
+    grid-row: 1/2;
+  }
+}
 
 .testimonial {
   width: 88%;
@@ -193,11 +246,14 @@ body {
   display: none;
   position: absolute;
   background-color: white;
-  left: 5%;
+  right: 5%;
   width: 90%;
   top: 20%;
   text-align: center;
   padding: 4rem;
+}
+.header__links.active {
+  display: block;
 }
 .header__links::after {
   content: "";
@@ -212,12 +268,101 @@ body {
 }
 .header__link:not(:last-child) a {
   color: #818498;
+  transition: all 0.3s ease-in;
 }
 .header__link:not(:last-child) a:hover {
   color: #5a636c;
 }
 .header .arrow {
   text-align: center;
+}
+@media screen and (min-width: 750px) {
+  .header {
+    background: url("../images/desktop/image-header.jpg") center left/cover no-repeat;
+  }
+  .header__links, .header__links.active {
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    top: 20px;
+    background-color: transparent;
+  }
+  .header__links::after {
+    display: none;
+  }
+  .header__link {
+    margin-bottom: 0;
+  }
+  .header__link:not(:last-child) {
+    padding-top: 10px;
+    margin-right: 2rem;
+  }
+  .header__link:not(:last-child) a {
+    color: white;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 80rem;
+  }
+}
+
+.footer__illustrations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (min-width: 750px) {
+  .footer__illustrations {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+.footer__illustration img {
+  width: 100%;
+  height: 100%;
+}
+.footer__content {
+  background-color: rgba(69, 140, 126, 0.5);
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.footer__content > * {
+  display: inline-block;
+}
+.footer__logo-box {
+  margin-bottom: 3rem;
+}
+.footer__logo path {
+  fill: rgba(37, 86, 75, 0.8);
+}
+.footer__links {
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 8rem;
+}
+.footer__link {
+  color: #458c7e;
+  transition: all 0.3s ease-in;
+}
+.footer__link:hover {
+  color: white;
+}
+.footer .contacts {
+  margin-bottom: 2rem;
+}
+.footer .contact:not(:last-child) {
+  margin-right: 2rem;
+}
+.footer .contact__icon path {
+  transition: all 0.3s ease-in;
+}
+.footer .contact__icon:hover path {
+  fill: white;
 }
 
 .nav {
@@ -227,6 +372,27 @@ body {
   padding-top: 30px;
   width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+  .main .illustrations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 750px) {
+  .main .testimonials {
+    display: flex;
+    gap: 2rem;
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 750px) {
+  .main .section-testimonials {
+    padding: 7rem 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

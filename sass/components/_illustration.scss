@@ -56,5 +56,42 @@
     &:last-child {
       margin-top: -4px;
     }
+
+    @media screen and (min-width: 750px) {
+      margin-top: -4px;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1 / -1;
+    text-align: left;
+
+    &__title,
+    &__text {
+      text-align: left;
+    }
+
+    &--blended {
+      .illustration {
+        &__title,
+        &__text {
+          text-align: center;
+          width: 55%;
+          margin: 0 auto;
+        }
+
+        &__title {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &--mid {
+      .illustration__content {
+        grid-row: 1 / 2;
+      }
+    }
   }
 }
